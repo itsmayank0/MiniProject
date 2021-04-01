@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MiniProject.Models
@@ -74,6 +75,20 @@ namespace MiniProject.Models
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
+
+        [Required]
+        [MaxLength(255)]
+        public string FullName { get; set; }
+
+        [Required]
+        public DateTime DOB { get; set; }
+
+        [Required]
+        public string Gender { get; set; }
+
+        [Display(Name = "Register as Admin")]
+        [Required]
+        public byte isAdmin { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]

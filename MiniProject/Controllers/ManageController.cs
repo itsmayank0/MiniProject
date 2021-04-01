@@ -16,6 +16,7 @@ namespace MiniProject.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+
         public ManageController()
         {
         }
@@ -386,4 +387,5 @@ namespace MiniProject.Controllers
 
 #endregion
     }
+
 }

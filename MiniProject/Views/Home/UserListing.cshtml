@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MiniProject.ViewModels.UsersViewModel>  
+   
+@{  
+    ViewBag.Title = "Users With Roles";  
+    Layout = "~/Views/Shared/_Layout.cshtml";  
+}  
+   
+<div class="panel">  
+    <div class="panel-heading">  
+        <h3 class="box-title">  
+            <b>All Users with Roles</b>  
+        </h3>  
+    </div>  
+    <!-- /.box-header -->  
+    <div class="panel-body">  
+        <table class="table table-hover table-bordered " id="UsersWithRoles">  
+            <thead>  
+                <tr>
+                    <td><b>Username</b></td>
+                    <td><b>FullName</b></td>
+                    <td><b>Email</b></td>
+                    <td><b>Gender</b></td>
+                    <td><b>DOB</b></td>
+                    <td><b>Role</b></td>
+
+                </tr>  
+            </thead>  
+            @foreach (var user in Model)  
+            {  
+                <tr>  
+                    <td>@user.Username</td>  
+                    <td>@user.FullName</td>  
+                    <td>@user.Email</td>  
+                    <td>@user.Gender</td>
+                    <td>@user.DOB.ToLongDateString()</td>
+                    <td>@user.Role</td>  
+                      
+                </tr>  
+            }  
+        </table>  
+    </div>  
+   
+    <div class="panel-footer">  
+        <p class="box-title"><b>Total Users till @String.Format("{0 : dddd, MMMM d, yyyy}", DateTime.Now)  : </b><span class="label label-primary">@Model.Count()</span></p>  
+    </div>  
+</div>  
+   
+   
+@section scripts{  
+    <script>  
+        $(function () {  
+            $('#UsersWithRoles').DataTable();  
+        });  
+    </script>  
+}
