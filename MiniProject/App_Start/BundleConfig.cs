@@ -17,6 +17,7 @@ namespace MiniProject
                         "~/Scripts/datatables/dataTables.responsive.js"
             ));
 
+            // Client-side validation Bundle
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 

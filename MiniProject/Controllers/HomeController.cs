@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using MiniProject.Models;
 using MiniProject.ViewModels;
 
+//Controller for general pages like Homepage, about and contact
+
 namespace MiniProject.Controllers
 {
     public class HomeController : Controller

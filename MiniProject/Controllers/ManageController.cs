@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MiniProject.Models;
+// Boilerplate controller for managing access
 
 namespace MiniProject.Controllers
 {
