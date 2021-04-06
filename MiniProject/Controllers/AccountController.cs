@@ -12,6 +12,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MiniProject.Models;
 
+// Controller for Account related stuff like Sigin, Registration etc.
 namespace MiniProject.Controllers
 {
     [Authorize]
@@ -144,7 +145,7 @@ namespace MiniProject.Controllers
             return View();
         }
 
-        //
+        // Account Creation method with custom fields
         // POST: /Account/Register
         [HttpPost]
         [AllowAnonymous]
@@ -256,7 +257,7 @@ namespace MiniProject.Controllers
             return code == null ? View("Error") : View();
         }
 
-        //
+        // Password Changing 
         // POST: /Account/ResetPassword
         [HttpPost]
         [AllowAnonymous]
@@ -421,7 +422,8 @@ namespace MiniProject.Controllers
         {
             return View();
         }
-
+        
+        // Disposing Database connection
         protected override void Dispose(bool disposing)
         {
             if (disposing)
